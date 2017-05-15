@@ -1,0 +1,106 @@
+.scp {
+	font-family: "Roboto","Helvetica","Arial",sans-serif;
+	font-size: 1em;
+	color: #444;
+	background: #000;
+	display: block;
+	width: 100%;
+	height: 100%;
+	box-shadow: 0 4px 4px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);
+}
+
+.scp,
+.scp .belah {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+.scp .belah {
+	display: inline-block;
+	vertical-align: top;
+	height: 100%;
+}
+
+.scp .belah:first-of-type {
+	width: 65%;
+}
+
+.scp .belah:last-of-type {
+	width: 35%;
+}
+
+.scp .belah .luhur {
+	color: #fff;
+	background: #222;
+	display: block;
+	width: 100%;
+	height: 45px;
+	box-sizing: border-box;
+	padding: 10px;
+	margin: 0;
+}
+
+.scp .belah .luhur input {
+	color: #fff;
+	background: #333;
+	display: block;
+	width: 100%;
+	box-sizing: border-box;
+	padding: 5px;
+	border: 0;
+}
+
+.scp .belah .handap {
+	color: #ddd;
+	background: #111;
+	height: calc(100% - 45px);
+	padding: 0;
+	overflow-y: auto;
+	-moz-box-shadow: inset 0 0 10px #000;
+	-webkit-box-shadow: inset 0 0 10px #000;
+	box-shadow: inset 0 0 10px #000;
+}
+
+.scp .belah .handap div.title {
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+.scp .belah .handap,
+.scp .belah .scp-play-iframe {
+	display: block;
+	width: 100%;
+	box-sizing: border-box;
+	margin: 0;
+}
+
+.scp .belah .scp-play-iframe {
+	height: 100%;
+	border: 0;
+}
+
+.scp a {
+	text-decoration: none;
+	outline: 0;
+}
+
+.scp .belah .scp-play {
+	margin: 0;
+	padding: 10px;
+	display: block;
+	overflow: hidden;
+	cursor: pointer;
+	*overflow: visible
+}
+
+.scp .belah .scp-play span {
+	color: #767676;
+	font-size: .8em;
+}
+
+.scp .belah .scp-play:hover,
+.scp .belah .scp-play-active {
+	background: #000;
+}

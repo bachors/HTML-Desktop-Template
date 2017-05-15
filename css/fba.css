@@ -1,0 +1,163 @@
+/*********************************************************************
+* #### jQuery File Browser Awesome v0.2.0 ####
+* Coded by Ican Bachors 2014.
+* http://ibacor.com/labs/jquery-file-browser-awesome/
+* Updates will be posted to this site.
+*********************************************************************/
+
+#fba {
+	display: block;
+	height: 100%;
+	width: 100%;
+	box-sizing: border-box;
+	margin-bottom: 55px
+}
+
+#fba a {
+	color: rgba(255,255,255,0.75);
+}
+
+#fba a.aktip {
+	color: #fff;
+	background: #263238;
+	display: block;
+}
+
+#fba .fba_direktori {
+	display: inline-block;
+	padding: 0;
+	margin: 0;
+	background-color: #37474f;
+	width: 100%;
+	height: 100%;
+	float: left;
+	overflow: auto;
+	font-size: 12px
+}
+
+#fba .fba_tree {
+	padding: 10px;
+	display: block;
+	width: auto;
+	min-width: 200px
+}
+
+#fba .fba_tree, #fba .fba_tree button {
+	margin-bottom: 30px;
+}
+
+#fba .fba_tree a {
+	cursor: pointer;
+}
+
+#fba .fba_tree ul {
+	list-style: none outside none;
+	padding: 0px;
+	margin: 0px;
+}
+
+#fba .fba_tree li a {
+	line-height: 26px
+}
+
+#fba .fba_tree > ul > li > a {
+	display: block;
+	font-weight: normal;
+	position: relative;
+	text-decoration: none;
+}
+
+#fba .fba_tree li.parent > a {
+	padding: 0 0 0 18px;
+}
+
+#fba .fba_tree li.parent > a:before {
+	content: "+";
+	display: block;
+	height: 21;
+	left: 3px;
+	position: absolute;
+	top: 0px;
+	vertical-align: middle;
+	width: 18px;
+}
+
+#fba .fba_tree ul li.active > a:before {
+	content: "-";
+}
+
+#fba .fba_tree ul li.empty > a:before {
+	content: " ";
+}
+
+#fba .fba_tree ul li ul {
+	border-left: 1px solid rgba(255,255,255,.1);
+	display: block;
+	margin: 0 0 0 6px;
+	overflow: hidden;
+	padding: 0 0 0 9px;
+}
+
+#fba .fba_tree ul li ul li {
+	position: relative;
+}
+
+#fba .fba_tree ul li ul li:before {
+	content: "";
+	left: -20px;
+	position: absolute;
+	top: 12px;
+	width: 15px;
+}
+
+#fba .fba_file_editor {
+	display: inline-block;
+	padding: 0;
+	margin: 0;
+	background-color: #263238;
+	width: 100%;
+	height: 100%;
+	overflow: hidden
+}
+
+#fba .fba_direktori .fa-file-code-o {
+	color: #5CD3FF;
+}
+
+#fba .fba_direktori .fa-folder {
+	color: #FFDA5E;
+}
+
+#fba .fba_direktori .fa-cloud-download {
+	color: #FF5CAD;
+}
+
+#fba .fba_direktori .fa-android {
+	color: #ADFF5C;
+}
+
+#fba .fba_direktori .fa-globe,
+#fba .fba_direktori .fa-github {
+	color: #fff;
+}
+
+#fba .CodeMirror {
+	line-height: 1.3;
+	height: calc(100% - 30px);
+	text-align: left;
+	margin: 0px;
+}
+
+#fba .CodeMirror-linenumbers {
+	padding: 0 8px;
+}
+
+#fba #rf {
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+
+.splitter_container > .splitter_panel {
+	overflow: hidden !important
+}

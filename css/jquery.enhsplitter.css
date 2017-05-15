@@ -1,0 +1,163 @@
+/*!
+ * jQuery Enhanced Splitter Plugin
+ * LESS / CSS File
+ * Version 1.2.3
+ *
+ * https://github.com/hiltonjanfield/jquery.enhsplitter
+ *
+ * All classes to begin with 'splitter'.
+ * Standard container/object classes use _ separator (.splitter_container, .splitter_panel, etc.)
+ * Modifier/option classes use - separator (.splitter-vertical, .splitter-handle-dots, etc.)
+ *
+ * Do not make changes to the CSS file; edit the LESS file and compile.
+ */
+.splitter_container {
+  position: relative;
+  overflow: hidden;
+  /* Using !important to ensure random, generalized styles do not interfere with the layout. */
+  padding: 0 !important;
+  height: 100%;
+}
+.splitter_container > .splitter_panel {
+  position: absolute;
+  overflow: auto;
+  padding: 0;
+  margin: 0;
+}
+.splitter_container > .splitter_panel > :not(.splitter_container) {
+  overflow: auto;
+  height: 100%;
+}
+.splitter_container.splitter-horizontal > .splitter_panel {
+  left: 0;
+  width: 100%;
+}
+.splitter_container.splitter-horizontal > .splitter_panel:first-child {
+  /* Top panel */
+  top: 0;
+}
+.splitter_container.splitter-horizontal > .splitter_panel ~ .splitter_panel {
+  /* Bottom panel */
+  bottom: 0;
+}
+.splitter_container.splitter-vertical > .splitter_panel {
+  top: 0;
+  height: 100%;
+}
+.splitter_container.splitter-vertical > .splitter_panel:first-child {
+  /* Left panel */
+  left: 0;
+}
+.splitter_container.splitter-vertical > .splitter_panel ~ .splitter_panel {
+  /* Right panel */
+  right: 0;
+}
+.splitter_container.splitter-fixed > .splitter_bar {
+  cursor: default;
+}
+.splitter_container.splitter-handle-disabled > .splitter_bar > .splitter_handle {
+  cursor: inherit;
+}
+.splitter_bar {
+  background-color: #333;
+  position: absolute;
+  padding: 0 !important;
+  box-sizing: border-box;
+}
+.splitter_bar > .splitter_handle {
+  cursor: pointer;
+  background-color: #fff;
+  position: relative;
+  margin: auto;
+  z-index: 1000;
+  box-sizing: border-box;
+}
+.splitter_bar.splitter-invisible {
+  background: none !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+.splitter_bar.splitter-invisible .splitter_handle,
+.splitter_bar.splitter-handle-none .splitter_handle {
+  display: none;
+}
+.splitter-vertical > .splitter_bar {
+  cursor: ew-resize;
+  z-index: 900;
+  width: 2px;
+  height: 100%;
+}
+.splitter-vertical > .splitter_bar > .splitter_handle {
+  top: 50%;
+  margin-top: -25px;
+  height: 50px;
+}
+.splitter-vertical > .splitter_bar.splitter-handle-default > .splitter_handle,
+.splitter-vertical > .splitter_bar.splitter-handle-stripes > .splitter_handle {
+  width: 3px;
+  background-color: transparent;
+}
+.splitter-vertical > .splitter_bar.splitter-handle-bar > .splitter_handle {
+  width: 3px;
+}
+.splitter-vertical > .splitter_bar.splitter-handle-block > .splitter_handle {
+  width: 5px;
+}
+.splitter-vertical > .splitter_bar.splitter-handle-dots > .splitter_handle {
+  margin-left: -1px;
+  background-color: transparent;
+}
+.splitter-vertical > .splitter_bar.splitter-handle-lotsofdots > .splitter_handle {
+  height: 100px;
+  margin-top: -50px;
+  margin-left: -1px;
+  background-color: transparent;
+}
+.splitter-horizontal > .splitter_bar {
+  cursor: ns-resize;
+  z-index: 800;
+  width: 100%;
+  height: 2px;
+}
+.splitter-horizontal > .splitter_bar > .splitter_handle {
+  width: 50px;
+}
+.splitter-horizontal > .splitter_bar.splitter-handle-default > .splitter_handle,
+.splitter-horizontal > .splitter_bar.splitter-handle-stripes > .splitter_handle {
+  height: 3px;
+  margin-top: 1px;
+  background-color: transparent;
+}
+.splitter-horizontal > .splitter_bar.splitter-handle-bar > .splitter_handle {
+  height: 3px;
+  margin-top: 1px;
+}
+.splitter-horizontal > .splitter_bar.splitter-handle-block > .splitter_handle {
+  height: 5px;
+  margin-top: 1px;
+}
+.splitter-horizontal > .splitter_bar.splitter-handle-dots > .splitter_handle {
+  height: 100%;
+  margin-top: -1px;
+  background-color: transparent;
+}
+.splitter-horizontal > .splitter_bar.splitter-handle-lotsofdots > .splitter_handle {
+  height: 100%;
+  width: 100px;
+  background-color: transparent;
+}
+.splitter_container.splitter-active > .splitter_bar {
+  z-index: 1000;
+  /* Important to keep z-index of active splitter above .splitterMask. */
+}
+.splitter_container.splitter-active > .splitter_bar > .splitter_handle {
+  cursor: inherit;
+}
+.splitter_mask {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 999;
+}
